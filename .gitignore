@@ -1,3 +1,8 @@
+# Caché
+__pycache__
+
+# Entorno virtual
 /venv
 
+# Configuraciones de vscode
 .vscode
