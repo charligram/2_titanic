@@ -23,5 +23,5 @@ def rellenar_fare_median(df):
     return df_edad_rellenada
 
 def eliminar_columnas_ml(df_ml):
-    df_ml.drop(columns=['Embarked_Q', 'Title', 'Name'])
+    df_ml = df_ml.drop(columns=['Embarked_Q', 'Title', 'Name'])
     return df_ml
