@@ -1,8 +1,14 @@
 # Caché
-__pycache__
+__pycache__/
+*.py[cod]
+*$py.class
 
 # Entorno virtual
-/venv
+venv/
+
+# Carpetas internas de jupyter
+.ipynb_checkpoints/
 
 # Configuraciones de vscode
-.vscode
+.vscode/
+.idea/
