@@ -55,5 +55,12 @@ Random Forest Classifier
 - Cross validation: 0.797
 - Desviación estándar: 0.02552156257977987
 
-### Python requerido
-- Python 3.12.10
+## <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" /> Versión de python para el kernel
+- Python 3.13.9
+
+## 🏆 Resultados finales
+Se encuentran muchas variantes que afectan fuertemente la posibilidad de sobrevivencia de los pasajeros.
+Además se considera que el modelo de ML cumple con buenas métricas en su evaluación, esto se traduce en el desarrollo de un modelo funcional y efectivo.
+
+## 👤 Autor
+Carlos Rojas
