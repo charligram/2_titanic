@@ -55,7 +55,7 @@ Random Forest Classifier
 - Cross validation: 0.797
 - Desviación estándar: 0.02552156257977987
 
-## <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" /> Versión de python para el kernel
+## Versión de python para el kernel
 - Python 3.13.9
 
 ## 🏆 Resultados finales
