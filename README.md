@@ -20,18 +20,27 @@ Registros: 891
 ## 🔎 EDA
 ### Sobrevivientes por distintas categorías
 Insights:
+
 - El genero femenino sobrevive mucho mas que los hombres
+
 ![Sobrevivientes mujeres](outputs/figures/sobrevivientes_female.png)
 ![Sobrevivientes hombres](outputs/figures/sobrevivientes_hombres.png)
 
+
 - Ser de un rango de edad "bajo" tiene un poco de implicancia en la posibilidad de sobrevivir
+
 ![Sobrevivientes jóvenes](outputs/figures/sobrevivientes_jovenes.png)
 
+
 - Tener un precio en la tarifa por debajo de 15 aumenta las probabilidades de no sobrevivir
+
 ![Sobrevivientes tarifa baja](outputs/figures/sobrevivientes_fare_bajo.png)
 
+
 - Los pasajeros con una Pclass mejor tienden a sobrevivir más
+
 ![Sobrevivientes de primera clase](outputs/figures/sobrevivientes_pclass_1.png)
+
 
 - Los pasajeros embarcados en C (Cherbourg) tiene mas probabiliades de sobrevivencia que los embarcados en otro lugar
 
