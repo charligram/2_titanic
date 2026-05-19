@@ -34,6 +34,7 @@ Insights:
 ![Sobrevivientes de primera clase](outputs/figures/sobrevivientes_pclass_1.png)
 
 - Los pasajeros embarcados en C (Cherbourg) tiene mas probabiliades de sobrevivencia que los embarcados en otro lugar
+
 ![Sobrevivientes de Cherbourg](outputs/figures/sobrevivientes_embarked_c.png)
 
 ## 🤖 ML
