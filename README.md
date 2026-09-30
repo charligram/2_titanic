@@ -71,42 +71,5 @@ Los pasajeros embarcados en C (Chesbourg) tienen una tasa de supervivencia un po
 ![pclass_by_embarked](outputs/figures/14_pclass_by_embarked.png)
 
 
-
-## 🤖 ML
-### Feature engineering
-- Codificar los datos del género en 0 y 1
-- Crear columnas en formato One-Hot-Encoding para identificar embarcación
-- Crear columna para contar el tamaño de la familia de cada pasajero, además de una segunda columna que indica si el pasajero viaja solo
-- Crear columnas en formato One-Hot-Encoding para diferenciando en el título del pasajero
-- Balancear los datos debido a que hay varios mas no sobrevivientes con SMOTE
-
-### Modelos utilizados
-- Logistic Regression
-- Random Forest Classifier
-
-### Métricas calculadas y valores general
-Logistic Regression:
-- Accuracy: 0.7932960893854749
-- Precision: 0.7222222222222222
-- Recall: 0.7536231884057971
-- F1: 0.7375886524822695
-- Cross validation: 0.8204255853367648
-- Desviación estándar: 0.023302835425840315
-
-Random Forest Classifier
-- Accuracy: 0.821
-- Precision: 0.776
-- Recall: 0.753
-- F1: 0.764
-- Cross validation: 0.797
-- Desviación estándar: 0.02552156257977987
-
-## Versión de python para el kernel
-- Python 3.13.9
-
-## 🏆 Resultados finales
-Se encuentran muchas variantes que afectan fuertemente la posibilidad de sobrevivencia de los pasajeros.
-Además se considera que el modelo de ML cumple con buenas métricas en su evaluación, esto se traduce en el desarrollo de un modelo funcional y efectivo.
-
 ## 👤 Autor
 Carlos Rojas
