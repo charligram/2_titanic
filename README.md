@@ -177,6 +177,21 @@ Confusion matrix in test:
 
 ![05_01_confusion_matrix_svc_1](outputs/models_figures/05_01_confusion_matrix_svc_1.png)
 
+### GridSearchCV
+Luego de los procesos anteriores se optó por probar GridSearchCV en los modelos de LogisticRegression y RandomForestClassifier, obteniendo los siguientes resultados.
+
+LogisticRegression:
+
+![06_test_metrics_logistic_gridsearch](outputs/models_figures/06_test_metrics_logistic_gridsearch.png)
+
+![06_01_confusion_matrix_logistic_gridsearch](outputs/models_figures/06_01_confusion_matrix_logistic_gridsearch.png)
+
+
+RandomForestClassifier:
+
+![07_test_metrics_random_forest_gridsearch](outputs/models_figures/07_test_metrics_random_forest_gridsearch.png)
+
+![07_01_confusion_matrix_random_forest_gridsearch](outputs/models_figures/07_01_confusion_matrix_random_forest_gridsearch.png)
 
 ## 👤 Autor
 Carlos Rojas
