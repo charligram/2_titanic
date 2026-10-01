@@ -87,13 +87,19 @@ Feature que fueron eliminadas porque es difícil que den una señal clara:
 - Name (Es eliminado solo luego de extraer el Title)
 
 ### FamilySize
-Crear feature FamilySize sumando lo que tenga el registro en SibSp y Parch, finalmente sumandole 1, teniendo el total del grupo de ese registro.
+Crear feature FamilySize sumando lo que tenga el registro en SibSp y Parch, finalmente sumandole 1, teniendo el total del grupo de ese registro. Podemos observar la interracción con el target aquí:
+
+![01_survival_rate_by_family](outputs/feature_engineering_figures/01_survival_rate_by_family_size.png)
 
 ### IsAlone
-Gracias a FamilySize podemos obtener el feature IsAlone, que indica si la persona estaba abordo sin acompañantes.
+Gracias a FamilySize podemos obtener el feature IsAlone, que indica si la persona estaba abordo sin acompañantes. Interacción con target:
+
+![02_survival_rate_by_is_alone](outputs/feature_engineering_figures/02_survival_rate_by_isalone.png)
 
 ### Title
-Feature Title creado a partir del título que está dentro de Name de cada registro. Como por ejemplo: Mr, Miss, etc.
+Feature Title creado a partir del título que está dentro de Name de cada registro. Como por ejemplo: Mr, Miss, etc. Interracción con target:
+
+![03_survival_rate_by_title](outputs/feature_engineering_figures/03_survival_rate_by_title.png)
 
 ## 👤 Autor
 Carlos Rojas
