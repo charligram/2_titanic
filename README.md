@@ -135,47 +135,47 @@ Los resultados son los siguientes:
 #### LogisticRegression
 Metrics in train:
 
-![01_train_metrics_logistic_regression](outputs/models_figures/01_train_metrics_logistic_regression_1.png)
+![01_train_metrics_logistic_regression](outputs/models_figures/01_train_metrics_logistic_regression.png)
 
 Confusion matrix in test:
 
-![01_01_confusion_matrix_logistic_1](outputs/models_figures/01_01_confusion_matrix_logistic_1.png)
+![01_01_confusion_matrix_logistic](outputs/models_figures/01_01_confusion_matrix_logistic.png)
 
 #### RandomForestClassifer
 Metrics in train:
 
-![02_train_metrics_random_forest](outputs/models_figures/02_train_metrics_random_forest_1.png)
+![02_train_metrics_random_forest](outputs/models_figures/02_train_metrics_random_forest.png)
 
 Confusion matrix in test:
 
-![02_01_confusion_matrix_logistic_1](outputs/models_figures/02_01_confusion_matrix_random_forest_1.png)
+![02_01_confusion_matrix_logistic](outputs/models_figures/02_01_confusion_matrix_random_forest.png)
 
 #### DecisionTreeClassifer
 Metrics in train:
 
-![03_train_metrics_decision_tree](outputs/models_figures/03_train_metrics_decision_tree_1.png)
+![03_train_metrics_decision_tree](outputs/models_figures/03_train_metrics_decision_tree.png)
 
 Confusion matrix in test:
 
-![03_01_confusion_matrix_logistic_1](outputs/models_figures/03_01_confusion_matrix_decision_tree_1.png)
+![03_01_confusion_matrix_logistic](outputs/models_figures/03_01_confusion_matrix_decision_tree.png)
 
 #### KNeighborsClassifier
 Metrics in train:
 
-![04_train_metrics_knn](outputs/models_figures/04_train_metrics_knn_1.png)
+![04_train_metrics_knn](outputs/models_figures/04_train_metrics_knn.png)
 
 Confusion matrix in test:
 
-![04_01_confusion_matrix_knn_1](outputs/models_figures/04_01_confusion_matrix_knn_1.png)
+![04_01_confusion_matrix_knn](outputs/models_figures/04_01_confusion_matrix_knn.png)
 
 #### SVC
 Metrics in train:
 
-![05_train_metrics_svc](outputs/models_figures/05_train_metrics_svc_1.png)
+![05_train_metrics_svc](outputs/models_figures/05_train_metrics_svc.png)
 
 Confusion matrix in test:
 
-![05_01_confusion_matrix_svc_1](outputs/models_figures/05_01_confusion_matrix_svc_1.png)
+![05_01_confusion_matrix_svc](outputs/models_figures/05_01_confusion_matrix_svc.png)
 
 ### GridSearchCV
 Luego de los procesos anteriores se optó por probar GridSearchCV en los modelos de LogisticRegression y RandomForestClassifier, obteniendo los siguientes resultados.
