@@ -13,11 +13,12 @@ Registros: 891
 - Identificar características más influyentes
 - Generar modelo de ML predictor de sobrevivientes
 
-## 🧹 data cleaning
-- Completar valores faltantes en la edad (Age) con la mediana de los registros
-- Eliminar columna de la cabina (Cabin) debido a su pobre cantidad de registros no nulos
-- Completar datos faltantes en el lugar de embarcación del pasajero (Embarked) con el valor que mas se repita (moda)
-- Completar valores faltantes en el las tarifas (Fare) con la mediana de los registros
+## 🧹 Data cleaning
+Los features que son imputados, no se hacen directamente, si no que se harán dentro del Pipeline.
+
+- Age (imputado): Completar nulos con mediana
+- Cabin (eliminado): Por tener demasiados nulos, dificil de reconstruir logicamente
+- Embarked (imputado): Completar nulos con moda
 
 ## 🔎 EDA
 Los gráficos que se muestran a continuación se tratan de los principales hallazgos y consideraciónes más importantes, el resto de visualizaciones se pueden encontrar en la carpeta outputs/figures/
@@ -70,6 +71,29 @@ Los pasajeros embarcados en C (Chesbourg) tienen una tasa de supervivencia un po
 
 ![pclass_by_embarked](outputs/figures/14_pclass_by_embarked.png)
 
+## ⚙️ Preprocess
+### Sex
+Cambiamos sus valores a binario
+
+Female: 0
+
+Male: 1
+
+### Drop features
+Feature que fueron eliminadas porque es difícil que den una señal clara:
+
+- PassengerId
+- Ticket
+- Name (Es eliminado solo luego de extraer el Title)
+
+### FamilySize
+Crear feature FamilySize sumando lo que tenga el registro en SibSp y Parch, finalmente sumandole 1, teniendo el total del grupo de ese registro.
+
+### IsAlone
+Gracias a FamilySize podemos obtener el feature IsAlone, que indica si la persona estaba abordo sin acompañantes.
+
+### Title
+Feature Title creado a partir del título que está dentro de Name de cada registro. Como por ejemplo: Mr, Miss, etc.
 
 ## 👤 Autor
 Carlos Rojas
