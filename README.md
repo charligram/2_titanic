@@ -101,5 +101,72 @@ Feature Title creado a partir del título que está dentro de Name de cada regis
 
 ![03_survival_rate_by_title](outputs/feature_engineering_figures/03_survival_rate_by_title.png)
 
+## 🤖 Machine Learning
+### Models
+
+Modelos utilizados:
+
+- LogisticRegression
+- RandomForestClassifier
+- DecisionTreeClassifier
+- KNeighborsClassifier
+
+### Pipeline
+Aquí se creó un pipeline que hace las siguientes actividades:
+
+1. Imputar features numéricas con mediana
+
+2. Imputar features categóricas con moda
+
+3. Aplicar one-hot encoding para variables categóricas
+
+4. Aplicar StandarScaler a features
+
+5. Estimar con modelo seleccionado
+
+### Evaluation in train
+Para analizar como es que los distintos modelos aprenden y con qué estabilidad se ha decidido hacer pruebas con StratifiedKFolds para mantener proporciones del target en las pruebas.
+
+Luego se realiza una matriz de confusión con los datos seleccionados para test.
+
+Los resultados son los siguientes:
+
+#### LogisticRegression
+Metrics in train:
+
+![01_train_metrics_logistic_regression](outputs/models_figures/01_train_metrics_logistic_regression_1.png)
+
+Confusion matrix in test:
+
+![01_01_confusion_matrix_logistic_1](outputs/models_figures/01_01_confusion_matrix_logistic_1.png)
+
+#### RandomForestClassifer
+Metrics in train:
+
+![02_train_metrics_random_forest](outputs/models_figures/02_train_metrics_random_forest_1.png)
+
+Confusion matrix in test:
+
+![02_01_confusion_matrix_logistic_1](outputs/models_figures/02_01_confusion_matrix_random_forest_1.png)
+
+#### DecisionTreeClassifer
+Metrics in train:
+
+![03_train_metrics_decision_tree](outputs/models_figures/03_train_metrics_decision_tree_1.png)
+
+Confusion matrix in test:
+
+![03_01_confusion_matrix_logistic_1](outputs/models_figures/03_01_confusion_matrix_decision_tree_1.png)
+
+#### KNeighborsClassifier
+Metrics in train:
+
+![04_train_metrics_knn](outputs/models_figures/04_train_metrics_knn_1.png)
+
+Confusion matrix in test:
+
+![04_01_confusion_matrix_knn_1](outputs/models_figures/04_01_confusion_matrix_knn_1.png)
+
+
 ## 👤 Autor
 Carlos Rojas
