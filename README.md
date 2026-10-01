@@ -110,6 +110,7 @@ Modelos utilizados:
 - RandomForestClassifier
 - DecisionTreeClassifier
 - KNeighborsClassifier
+- SVC
 
 ### Pipeline
 Aquí se creó un pipeline que hace las siguientes actividades:
@@ -166,6 +167,15 @@ Metrics in train:
 Confusion matrix in test:
 
 ![04_01_confusion_matrix_knn_1](outputs/models_figures/04_01_confusion_matrix_knn_1.png)
+
+#### SVC
+Metrics in train:
+
+![05_train_metrics_svc](outputs/models_figures/05_train_metrics_svc_1.png)
+
+Confusion matrix in test:
+
+![05_01_confusion_matrix_svc_1](outputs/models_figures/05_01_confusion_matrix_svc_1.png)
 
 
 ## 👤 Autor
