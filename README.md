@@ -26,7 +26,7 @@ Los gráficos que se muestran a continuación se tratan de los principales halla
 ### General survival rate
 A modo general, dentro de la tragedia del titanic, los pasajeros sobrevivieron en un 38.38%
 
-![survival_rate](outputs/figures/01_survival_rate.png)
+![survival_rate](outputs/figures/01_Survival_rate.png)
 
 ### Pclass
 La tasa de supervivencia disminuty progresivamente entre primera, segunda y tercera clase.
