@@ -101,5 +101,97 @@ Feature Title creado a partir del título que está dentro de Name de cada regis
 
 ![03_survival_rate_by_title](outputs/feature_engineering_figures/03_survival_rate_by_title.png)
 
+## 🤖 Machine Learning
+### Models
+
+Modelos utilizados:
+
+- LogisticRegression
+- RandomForestClassifier
+- DecisionTreeClassifier
+- KNeighborsClassifier
+- SVC
+
+### Pipeline
+Aquí se creó un pipeline que hace las siguientes actividades:
+
+1. Imputar features numéricas con mediana
+
+2. Imputar features categóricas con moda
+
+3. Aplicar one-hot encoding para variables categóricas
+
+4. Aplicar StandarScaler a features
+
+5. Estimar con modelo seleccionado
+
+### Evaluation in train
+Para analizar como es que los distintos modelos aprenden y con qué estabilidad se ha decidido hacer pruebas con StratifiedKFolds para mantener proporciones del target en las pruebas.
+
+Luego se realiza una matriz de confusión con los datos seleccionados para test.
+
+Los resultados son los siguientes:
+
+#### LogisticRegression
+Metrics in train:
+
+![01_train_metrics_logistic_regression](outputs/models_figures/01_train_metrics_logistic_regression.png)
+
+Confusion matrix in test:
+
+![01_01_confusion_matrix_logistic](outputs/models_figures/01_01_confusion_matrix_logistic.png)
+
+#### RandomForestClassifer
+Metrics in train:
+
+![02_train_metrics_random_forest](outputs/models_figures/02_train_metrics_random_forest.png)
+
+Confusion matrix in test:
+
+![02_01_confusion_matrix_logistic](outputs/models_figures/02_01_confusion_matrix_random_forest.png)
+
+#### DecisionTreeClassifer
+Metrics in train:
+
+![03_train_metrics_decision_tree](outputs/models_figures/03_train_metrics_decision_tree.png)
+
+Confusion matrix in test:
+
+![03_01_confusion_matrix_logistic](outputs/models_figures/03_01_confusion_matrix_decision_tree.png)
+
+#### KNeighborsClassifier
+Metrics in train:
+
+![04_train_metrics_knn](outputs/models_figures/04_train_metrics_knn.png)
+
+Confusion matrix in test:
+
+![04_01_confusion_matrix_knn](outputs/models_figures/04_01_confusion_matrix_knn.png)
+
+#### SVC
+Metrics in train:
+
+![05_train_metrics_svc](outputs/models_figures/05_train_metrics_svc.png)
+
+Confusion matrix in test:
+
+![05_01_confusion_matrix_svc](outputs/models_figures/05_01_confusion_matrix_svc.png)
+
+### GridSearchCV
+Luego de los procesos anteriores se optó por probar GridSearchCV en los modelos de LogisticRegression y RandomForestClassifier, obteniendo los siguientes resultados.
+
+LogisticRegression:
+
+![06_test_metrics_logistic_gridsearch](outputs/models_figures/06_test_metrics_logistic_gridsearch.png)
+
+![06_01_confusion_matrix_logistic_gridsearch](outputs/models_figures/06_01_confusion_matrix_logistic_gridsearch.png)
+
+
+RandomForestClassifier:
+
+![07_test_metrics_random_forest_gridsearch](outputs/models_figures/07_test_metrics_random_forest_gridsearch.png)
+
+![07_01_confusion_matrix_random_forest_gridsearch](outputs/models_figures/07_01_confusion_matrix_random_forest_gridsearch.png)
+
 ## 👤 Autor
 Carlos Rojas
