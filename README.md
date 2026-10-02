@@ -193,5 +193,59 @@ RandomForestClassifier:
 
 ![07_01_confusion_matrix_random_forest_gridsearch](outputs/models_figures/07_01_confusion_matrix_random_forest_gridsearch.png)
 
+## 🏃 Run project
+### Notebooks
+Para poder ejecutar los notebooks hay que hacer lo siguiente:
+
+1. Descargar dataset
+```
+project
+├──data/            <-- Crear carpeta
+│  ├──clean/        <-- Crear carpeta
+│  ├──processed/    <-- Crear carpeta
+│  └──raw/          <-- Crear carpeta
+│     └──train.csv  <-- Aquí debe ir el dataset
+├──app/
+├──models/
+├──notebooks/
+│
+...
+...
+```
+2. Crear entorno virtual (recomendado)
+
+Ejecutar en la terminal: python -m venv venv
+
+Luego: venv/Scripts/activate
+
+En terminal: pip install -r requirements.txt
+
+3. Interpretes
+
+Ahora es necesario seleccionar el interprete y el kernel dentro de los notebooks, para ello ejecutar Ctrl+Shift+P y seleccionar el interprete del entorno virtual. Luego seleccionar el kernel para el notebook, que también debe ser el entorno virtual.
+
+### API
+Para ejecutar la API, luego de instalar las dependencias en un entorno virtual, ejecutar en terminal:
+
+uvicorn app.main:app --reload
+
+Luego de eso se puede ingresar a http://localhost:8000 y http://localhost:8000/docs para probar la API.
+
+Para hacer la prueba de la predicción se debe clickear el boton POST-->Try it out-->Ingresar JSON de prueba en el cuadro, por ejemplo:
+
+```
+{
+  "Pclass": 3,
+  "Name": "Mr. Juan",
+  "Sex": "male",
+  "Age": 15,
+  "SibSp": 1,
+  "Parch": 0,
+  "Fare": 50,
+  "Embarked": "C"
+}
+```
+
+
 ## 👤 Autor
 Carlos Rojas
