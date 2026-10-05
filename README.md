@@ -2,6 +2,17 @@
 ## ❓ Planteamiento del proyecto
 En los datos de los sobrevivientes del Titanic existen ciertas características claves que aumentan o disminuyen las probabilidades de que el pasajero sobreviva al lamentable evento. La idea principal de este proyecto es lograr predecir si un pasajero sobrevive a partir de sus datos.
 
+## 🛠️ Technologies/Tools
+
+- Pandas
+- Scikit-learn
+- FastApi
+- Docker
+- Pydantic
+- NumPy
+- Matplotlib
+- Seaborn
+
 ## ℹ️ Dataset
 Recurso: Kaggle
 
@@ -194,10 +205,61 @@ RandomForestClassifier:
 ![07_01_confusion_matrix_random_forest_gridsearch](outputs/models_figures/07_01_confusion_matrix_random_forest_gridsearch.png)
 
 ## 🏃 Run project
-### Notebooks
+### API (Docker)
+Para poder correr la API predictora de sobrevivientes es necesario hacer lo siguiente:
+
+1. Clonar repositorio
+
+2. Iniciar Docker Desktop
+
+3. PowerShell
+Dentro de powershell, dirigirse a la carpeta del proyecto con:
+
+cd "path_de_la_carpeta_del_proyecto"
+
+4. Construir imágen
+Ejecutar en powershell:
+
+docker build -t titanic-api .
+
+5. Container
+Ahora ejecutar contenedor, para ello en powershell:
+
+docker run --name titanic-api-container -p 8000:8000 titanic-api
+
+6. Realizar predicción
+Una vez con el contenedor corriendo, se puede ingresar a http://localhost:8000/docs
+
+Clickear endpoint POST /predict --> Try it out --> Realizar consulta con JSON, ejemplo de JSON:
+
+```
+{
+  "Pclass": 2,
+  "Name": "Allen, Mr. Joao Carlos",
+  "Sex": "male",
+  "Age": 24,
+  "SibSp": 1,
+  "Parch": 0,
+  "Fare": 50,
+  "Embarked": "C"
+}
+```
+
+Ejemplo de respuesta:
+
+```
+{
+  "prediction": 0,
+  "label": "Not survive"
+}
+```
+
+### Notebooks y API (manual)
 Para poder ejecutar los notebooks hay que hacer lo siguiente:
 
-1. Descargar dataset
+1. Clonar repositorio
+
+2. Descargar dataset
 ```
 project
 ├──data/            <-- Crear carpeta
@@ -212,7 +274,9 @@ project
 ...
 ...
 ```
-2. Crear entorno virtual (recomendado)
+3. Crear entorno virtual (recomendado)
+
+En la terminal se debe de estar posicionado dentro del proyecto.
 
 Ejecutar en la terminal: python -m venv venv
 
@@ -220,11 +284,12 @@ Luego: venv/Scripts/activate
 
 En terminal: pip install -r requirements.txt
 
-3. Interpretes
+4. Interpretes
 
 Ahora es necesario seleccionar el interprete y el kernel dentro de los notebooks, para ello ejecutar Ctrl+Shift+P y seleccionar el interprete del entorno virtual. Luego seleccionar el kernel para el notebook, que también debe ser el entorno virtual.
 
-### API
+5. API
+
 Para ejecutar la API, luego de instalar las dependencias en un entorno virtual, ejecutar en terminal:
 
 uvicorn app.main:app --reload
