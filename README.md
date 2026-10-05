@@ -194,8 +194,59 @@ RandomForestClassifier:
 ![07_01_confusion_matrix_random_forest_gridsearch](outputs/models_figures/07_01_confusion_matrix_random_forest_gridsearch.png)
 
 ## 🏃 Run project
+### API
+Para poder correr la API predictora de sobrevivientes es necesario hacer lo siguiente:
+
+1. Clonar repositorio
+
+2. Iniciar Docker Desktop
+
+3. PowerShell
+Dentro de powershell, dirigirse a la carpeta del proyecto con:
+
+cd "path_de_la_carpeta_del_proyecto"
+
+4. Construir imágen
+Ejecutar en powershell:
+
+docker build -t titanic-api .
+
+5. Container
+Ahora ejecutar contenedor, para ello en powershell:
+
+docker run --name titanic-api-container -p 8000:8000 titanic-api
+
+6. Realizar predicción
+Una vez con el contenedor corriendo, se puede ingresar a http://localhost:8000/docs
+
+Clickear endpoint POST /predict --> Try it out --> Realizar consulta con JSON, ejemplo de JSON:
+
+```
+{
+  "Pclass": 2,
+  "Name": "Allen, Mr. Joao Carlos",
+  "Sex": "male",
+  "Age": 24,
+  "SibSp": 1,
+  "Parch": 0,
+  "Fare": 50,
+  "Embarked": "C"
+}
+```
+
+Ejemplo de respuesta:
+
+```
+{
+  "prediction": 0,
+  "label": "Not survive"
+}
+```
+
 ### Notebooks
 Para poder ejecutar los notebooks hay que hacer lo siguiente:
+
+0. Clonar repositorio
 
 1. Descargar dataset
 ```
@@ -213,6 +264,8 @@ project
 ...
 ```
 2. Crear entorno virtual (recomendado)
+
+En la terminal se debe de estar posicionado dentro del proyecto.
 
 Ejecutar en la terminal: python -m venv venv
 
