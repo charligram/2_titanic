@@ -2,6 +2,17 @@
 ## ❓ Planteamiento del proyecto
 En los datos de los sobrevivientes del Titanic existen ciertas características claves que aumentan o disminuyen las probabilidades de que el pasajero sobreviva al lamentable evento. La idea principal de este proyecto es lograr predecir si un pasajero sobrevive a partir de sus datos.
 
+## 🛠️ Technologies/Tools
+
+- Pandas
+- Scikit-learn
+- FastApi
+- Docker
+- Pydantic
+- NumPy
+- Matplotlib
+- Seaborn
+
 ## ℹ️ Dataset
 Recurso: Kaggle
 
