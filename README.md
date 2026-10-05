@@ -194,7 +194,7 @@ RandomForestClassifier:
 ![07_01_confusion_matrix_random_forest_gridsearch](outputs/models_figures/07_01_confusion_matrix_random_forest_gridsearch.png)
 
 ## 🏃 Run project
-### API
+### API (Docker)
 Para poder correr la API predictora de sobrevivientes es necesario hacer lo siguiente:
 
 1. Clonar repositorio
@@ -243,12 +243,12 @@ Ejemplo de respuesta:
 }
 ```
 
-### Notebooks
+### Notebooks y API (manual)
 Para poder ejecutar los notebooks hay que hacer lo siguiente:
 
-0. Clonar repositorio
+1. Clonar repositorio
 
-1. Descargar dataset
+2. Descargar dataset
 ```
 project
 ├──data/            <-- Crear carpeta
@@ -263,7 +263,7 @@ project
 ...
 ...
 ```
-2. Crear entorno virtual (recomendado)
+3. Crear entorno virtual (recomendado)
 
 En la terminal se debe de estar posicionado dentro del proyecto.
 
@@ -273,11 +273,12 @@ Luego: venv/Scripts/activate
 
 En terminal: pip install -r requirements.txt
 
-3. Interpretes
+4. Interpretes
 
 Ahora es necesario seleccionar el interprete y el kernel dentro de los notebooks, para ello ejecutar Ctrl+Shift+P y seleccionar el interprete del entorno virtual. Luego seleccionar el kernel para el notebook, que también debe ser el entorno virtual.
 
-### API
+5. API
+
 Para ejecutar la API, luego de instalar las dependencias en un entorno virtual, ejecutar en terminal:
 
 uvicorn app.main:app --reload
